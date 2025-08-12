@@ -1,31 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Box Model Example</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhancing HTML5 Content & Mastering Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    header, main, footer {
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    fieldset {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.4rem;
+      margin-bottom: 0.8rem;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Sample Page</h1>
-    <p>A simple example to demonstrate HTML & CSS layout and box model.</p>
+    <h1>Enhancing HTML5 Content & Mastering Forms</h1>
+    <p>This page demonstrates the use of lists, tables, media, and a well-structured HTML5 form with built-in validation.</p>
   </header>
-
+  
   <main>
-    <section class="card">
-      <h2>About Us</h2>
-      <p>We aim to show clean, structured HTML paired with well-organized CSS styling.</p>
+    <section>
+      <h2>1. Lists</h2>
+      <p>Here is an example of an ordered list and an unordered list:</p>
+      <ol>
+        <li>Prepare content structure</li>
+        <li>Add semantic HTML5 elements</li>
+        <li>Use lists and tables for organization</li>
+        <li>Embed media content</li>
+        <li>Create forms with validation</li>
+      </ol>
+      
+      <ul>
+        <li>HTML5 semantic tags</li>
+        <li>Accessibility features</li>
+        <li>Native form validation</li>
+        <li>Responsive design</li>
+      </ul>
     </section>
-
-    <section class="card highlight">
-      <h2>Our Mission</h2>
-      <p>To help users understand the power of proper spacing, layout, and structure in web design.</p>
+    
+    <section>
+      <h2>2. Table Example</h2>
+      <p>A simple table organizing some church committee members:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Samuel</td>
+            <td>Youth Leader</td>
+            <td>samuel@example.com</td>
+          </tr>
+          <tr>
+            <td>Grace</td>
+            <td>Treasurer</td>
+            <td>grace@example.com</td>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>Secretary</td>
+            <td>peter@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section>
+      <h2>3. Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/600x300?text=Church+Event" alt="Church Event" />
+        <figcaption>Photo from last Sunday’s church event.</figcaption>
+      </figure>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+    
+    <section>
+      <h2>4. Membership Registration Form</h2>
+      <form action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3" />
+          
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="example@example.com" required />
+          
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="^\+?\d{7,15}$" />
+          
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required max="2005-12-31" />
+        </fieldset>
+        
+        <fieldset>
+          <legend>Membership Details</legend>
+          
+          <label for="membership-type">Membership Type *</label>
+          <select id="membership-type" name="membership-type" required>
+            <option value="">-- Select --</option>
+            <option value="regular">Regular</option>
+            <option value="youth">Youth</option>
+            <option value="senior">Senior</option>
+          </select>
+          
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" placeholder="Any additional information" rows="4"></textarea>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Agreement</legend>
+          
+          <label>
+            <input type="checkbox" name="agree" required /> I agree to the church's terms and conditions *
+          </label>
+        </fieldset>
+        
+        <button type="submit">Submit</button>
+      </form>
     </section>
   </main>
-
+  
   <footer>
-    <p>&copy; 2025 Web Sample. All rights reserved.</p>
+    <p>&copy; 2025 Church Membership. All rights reserved.</p>
   </footer>
 </body>
 </html>
